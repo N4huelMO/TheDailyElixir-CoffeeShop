@@ -1,12 +1,21 @@
 import Header from "@/components/Header";
 import Head from "next/head";
+import Link from "next/link";
 
 import { Spectral_SC } from "next/font/google";
+
+import { BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
 
 const spectralSc = Spectral_SC({
   subsets: ["latin"],
   weight: "700",
 });
+
+const socials = [
+  { name: "Linkedin", link: "#", icon: <BsLinkedin size={40} /> },
+  { name: "GitHub", link: "#", icon: <BsGithub size={40} /> },
+  { name: "Instagram", link: "#", icon: <BsInstagram size={40} /> },
+];
 
 export default function Home() {
   return (
@@ -18,7 +27,7 @@ export default function Home() {
       <Header />
 
       <div
-        className="h-screen bg-cover bg-no-repeat bg-center text-white px-28"
+        className="h-screen flex flex-col bg-cover bg-no-repeat bg-center text-white px-28 pb-20"
         style={{
           backgroundImage: `linear-gradient(0deg, rgba(1,0,0,0.8) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.5) 100%),url("/hero-image.jpg")`,
         }}
@@ -49,7 +58,7 @@ export default function Home() {
               </button>
 
               <div className="relative group">
-                <button className="capitalize bg-transparent border-2 duration-[400ms] hover:border-[#614126] border-[#b36f34] px-5 py-2 ">
+                <button className="capitalize bg-transparent border-2 duration-[300ms] hover:border-[#614126] border-[#b36f34] px-5 py-2">
                   read more
                 </button>
 
@@ -57,6 +66,18 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="flex-grow flex items-end gap-10">
+          {socials.map((social, i) => (
+            <Link
+              key={i}
+              href={social.link}
+              className="hover:text-[#b36f34] hover:scale-125 duration-200"
+            >
+              {social.icon}
+            </Link>
+          ))}
         </div>
       </div>
     </>
