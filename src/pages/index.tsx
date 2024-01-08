@@ -27,12 +27,12 @@ export default function Home() {
       <Header />
 
       <div
-        className="h-screen flex flex-col bg-cover bg-no-repeat bg-center text-white px-5 md:px-28 pb-20"
+        className="h-screen flex flex-col bg-cover bg-no-repeat bg-center text-white px-5 md:px-20 lg:px-28 pb-20"
         style={{
           backgroundImage: `linear-gradient(0deg, rgba(1,0,0,0.8) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.5) 100%),url("/hero-image.jpg")`,
         }}
       >
-        <div className="flex flex-col md:items-end justify-center text-center md:text-left drop-shadow-xl">
+        <div className="flex flex-col lg:items-end justify-center text-center md:text-left drop-shadow-xl">
           <div className="mt-48 md:w-max bg-black/30 px-4 py-6 rounded-md md:px-0 md:py-0 md:bg-transparent -z-20">
             <h1 className="text-5xl lg:text-6xl font-semibold">
               Start your day with an{" "}
