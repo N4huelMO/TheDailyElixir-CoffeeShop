@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Spectral_SC } from "next/font/google";
 
 import { BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
+import { useState } from "react";
 
 const spectralSc = Spectral_SC({
   subsets: ["latin"],
@@ -18,23 +19,27 @@ const socials = [
 ];
 
 export default function Home() {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
   return (
     <>
       <Head>
         <title>The Daily Elixir</title>
       </Head>
 
-      <Header />
+      <Header isOpen={isOpen} setIsOpen={setIsOpen} />
 
       <div
-        className="h-screen flex flex-col bg-cover bg-no-repeat bg-center text-white px-5 md:px-20 lg:px-28 pb-20"
+        className={`h-screen flex flex-col bg-cover bg-no-repeat bg-center text-white px-5 md:px-20 lg:px-28 pb-14 md:pb-20 transition-opacity duration-500 ${
+          isOpen && "opacity-30"
+        }`}
         style={{
           backgroundImage: `linear-gradient(0deg, rgba(1,0,0,0.8) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.5) 100%),url("/hero-image.jpg")`,
         }}
       >
         <div className="flex flex-col lg:items-end justify-center text-center md:text-left drop-shadow-xl">
           <div className="mt-48 md:w-max bg-black/30 px-4 py-6 rounded-md md:px-0 md:py-0 md:bg-transparent -z-20">
-            <h1 className="text-5xl lg:text-6xl font-semibold">
+            <h1 className="text-4xl lg:text-5xl 2xl:text-6xl font-semibold">
               Start your day with an{" "}
               <span
                 className={`text-[#b36f34] underline underline-offset-8 uppercase ${spectralSc.className}`}
