@@ -1,22 +1,13 @@
 import Header from "@/components/Header";
+
 import Head from "next/head";
 import Link from "next/link";
 
-import { Spectral_SC } from "next/font/google";
-
-import { BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
 import { useState } from "react";
 
-const spectralSc = Spectral_SC({
-  subsets: ["latin"],
-  weight: "700",
-});
+import { socials } from "@/utils/constants";
 
-const socials = [
-  { name: "Linkedin", link: "#", icon: <BsLinkedin size={40} /> },
-  { name: "GitHub", link: "#", icon: <BsGithub size={40} /> },
-  { name: "Instagram", link: "#", icon: <BsInstagram size={40} /> },
-];
+import { spectralSc } from "@/utils/fonts";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -31,7 +22,7 @@ export default function Home() {
 
       <div
         className={`h-screen flex flex-col bg-cover bg-no-repeat bg-center text-white px-5 md:px-20 lg:px-28 pb-14 md:pb-20 transition-opacity duration-500 ${
-          isOpen && "opacity-30"
+          isOpen && "opacity-30 md:opacity-100"
         }`}
         style={{
           backgroundImage: `linear-gradient(0deg, rgba(1,0,0,0.8) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.5) 100%),url("/hero-image.jpg")`,
