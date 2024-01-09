@@ -3,9 +3,9 @@ import Link from "next/link";
 
 import { MenuMobileProps } from "@/utils/interfaces";
 
-import MobileMenu from "./MobileMenu";
-import DesktopMenu from "./DesktopMenu";
-import HamburgerIcon from "./HamburgerIcon";
+import MobileMenu from "./Menus/MobileMenu";
+import DesktopMenu from "./Menus/DesktopMenu";
+import HamburgerIcon from "./Menus/HamburgerIcon";
 
 const Header = ({ isOpen, setIsOpen }: MenuMobileProps) => {
   return (
