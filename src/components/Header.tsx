@@ -22,9 +22,9 @@ const Header = ({ isOpen, setIsOpen }: MenuMobileProps) => {
               priority
               src="/logo.png"
               alt="logo"
-              width={350}
-              height={350}
-              className="hidden md:block"
+              width={300}
+              height={300}
+              className="hidden md:block w-auto"
             />
 
             <Image
@@ -33,7 +33,7 @@ const Header = ({ isOpen, setIsOpen }: MenuMobileProps) => {
               alt="logo"
               width={200}
               height={200}
-              className="block md:hidden"
+              className="block md:hidden w-64"
             />
           </Link>
 

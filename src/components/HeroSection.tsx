@@ -15,16 +15,16 @@ const HeroSection = ({ isOpen }: { isOpen: boolean }) => {
     >
       <div className="flex flex-col lg:items-end justify-center text-center md:text-left drop-shadow-xl">
         <div className="mt-48 md:w-max bg-black/30 px-4 py-6 rounded-md md:px-0 md:py-0 md:bg-transparent -z-20">
-          <h1 className="text-4xl lg:text-5xl 2xl:text-6xl font-semibold">
+          <h1 className="text-4xl lg:text-5xl 2xl:text-6xl font-semibold leading-normal">
             Start your day with an{" "}
             <span
-              className={`text-[#b36f34] underline underline-offset-8 uppercase ${spectralSc.className}`}
+              className={`text-[#b36f34] text-5xl lg:text-6xl underline underline-offset-8 uppercase ${spectralSc.className}`}
             >
               elixir
             </span>
           </h1>
 
-          <h2 className="text-3xl md:text-4xl mt-5 font-semibold">
+          <h2 className="text-3xl md:text-4xl mt-5 font-semibold leading-normal">
             Start your day enjoying a{" "}
             <span
               className={`text-[#b36f34] underline underline-offset-4 uppercase ${spectralSc.className}`}
