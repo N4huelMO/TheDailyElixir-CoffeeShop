@@ -16,7 +16,7 @@ const Header = ({ isOpen, setIsOpen }: MenuMobileProps) => {
       >
         <MobileNav isOpen={isOpen} setIsOpen={setIsOpen} />
 
-        <div className="flex justify-between px-8 md:px-0 md:justify-around items-center">
+        <div className="flex justify-between px-5 md:px-0 md:justify-around items-center">
           <Link href="/">
             <Image
               priority

@@ -9,7 +9,7 @@ const MobileMenu = ({ isOpen, setIsOpen }: MenuMobileProps) => {
 
   return (
     <div
-      className={`md:hidden z-10 fixed top-[4.55rem] transition-all duration-500 test w-full h-screen bg-neutral-900 flex flex-col ${
+      className={`md:hidden z-10 fixed top-20 transition-all duration-500 test w-full h-screen bg-neutral-900 flex flex-col ${
         isOpen
           ? "translate-x-48 sm:translate-x-[calc(100%_-_20rem)]"
           : "translate-x-[calc(100%_+_1rem)]"
