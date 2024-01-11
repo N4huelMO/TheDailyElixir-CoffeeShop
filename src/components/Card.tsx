@@ -1,4 +1,9 @@
 import Image from "next/image";
+import {
+  PiShoppingCartSimpleBold,
+  PiPlusBold,
+  PiMinusBold,
+} from "react-icons/pi";
 
 const Card = () => {
   return (
@@ -21,20 +26,28 @@ const Card = () => {
           A shot of pure coffee essence. The perfect way to jumpstart your day.
         </p>
 
-        <div className="flex justify-between items-center mt-2">
-          <div className="flex gap-2 text-black font-bold text-xs">
-            <p className="px-2 py-0.5 bg-[#b36f34]">Tags</p>
-            <p className="px-2 py-0.5 bg-[#b36f34]">Tags</p>
+        <div className="flex justify-between items-center mt-4">
+          <div className="flex items-center justify-center gap-1">
+            <p className="text-xl text-gray-200">$</p>{" "}
+            <strong className="text-3xl">30</strong>
           </div>
 
-          <p className="text-3xl text-gray-200">
-            $ <strong>30</strong>
-          </p>
-        </div>
+          <div className="flex gap-2">
+            <div className="flex items-center justify-between gap-1 flex-1 bg-[#b36f34]/10 p-2 rounded-sm">
+              <button className="w-10 md:w-8 h-6 flex justify-center items-center">
+                <PiMinusBold />
+              </button>
+              <p className="w-1/2 text-center">1</p>
+              <button className="w-10 md:w-8 h-6 flex justify-center items-center">
+                <PiPlusBold />
+              </button>
+            </div>
 
-        <button className="capitalize bg-[#b36f34] text-black px-3 py-1 w-full font-bold text-lg mt-2 hover:bg-[#e68f44] transition-all active:scale-95">
-          add cart
-        </button>
+            <button className="capitalize bg-[#b36f34] text-black w-10 flex items-center justify-center rounded-sm w font-bold text-lg hover:bg-[#e68f44] transition-all active:translate-y-0.5">
+              <PiShoppingCartSimpleBold />
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
