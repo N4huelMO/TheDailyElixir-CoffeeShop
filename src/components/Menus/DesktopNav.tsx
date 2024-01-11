@@ -5,7 +5,7 @@ import Link from "next/link";
 
 import { PiShoppingCartSimpleBold } from "react-icons/pi";
 
-const DesktopMenu = () => {
+const DesktopNav = () => {
   const pathname = usePathname();
 
   return (
@@ -29,4 +29,4 @@ const DesktopMenu = () => {
   );
 };
 
-export default DesktopMenu;
+export default DesktopNav;

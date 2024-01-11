@@ -3,8 +3,8 @@ import Link from "next/link";
 
 import { MenuMobileProps } from "@/utils/interfaces";
 
-import MobileMenu from "./Menus/MobileMenu";
-import DesktopMenu from "./Menus/DesktopMenu";
+import MobileNav from "./Menus/MobileNav";
+import DesktopNav from "./Menus/DesktopNav";
 import HamburgerIcon from "./Menus/HamburgerIcon";
 
 const Header = ({ isOpen, setIsOpen }: MenuMobileProps) => {
@@ -14,7 +14,7 @@ const Header = ({ isOpen, setIsOpen }: MenuMobileProps) => {
         id="header-nav"
         className="text-white bg-black/35 md:bg-transparent fixed top-0 z-50 w-full py-6"
       >
-        <MobileMenu isOpen={isOpen} setIsOpen={setIsOpen} />
+        <MobileNav isOpen={isOpen} setIsOpen={setIsOpen} />
 
         <div className="flex justify-between px-8 md:px-0 md:justify-around items-center">
           <Link href="/">
@@ -39,7 +39,7 @@ const Header = ({ isOpen, setIsOpen }: MenuMobileProps) => {
 
           <HamburgerIcon isOpen={isOpen} setIsOpen={setIsOpen} />
 
-          <DesktopMenu />
+          <DesktopNav />
         </div>
       </header>
     </>
