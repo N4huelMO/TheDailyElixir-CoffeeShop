@@ -24,7 +24,7 @@ const MenuSection = ({ isOpen }: { isOpen: boolean }) => {
         </div>
 
         <div className="flex items-end justify-center">
-          <button className="capitalize px-5 py-2 bg-[#b36f34] text-black font-bold text-xl w-full md:w-1/2 xl:w-1/5 shadow-lg shadow-black/80 hover:scale-105 transition-all">
+          <button className="capitalize px-5 py-2 bg-[#b36f34] text-black font-bold text-xl w-full md:w-1/2 xl:w-1/5 shadow-lg shadow-black/80 hover:scale-105 transition-all rounded-sm">
             see more
           </button>
         </div>

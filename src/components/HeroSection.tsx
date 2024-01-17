@@ -34,9 +34,15 @@ const HeroSection = ({ isOpen }: { isOpen: boolean }) => {
           </h2>
 
           <div className="mt-10 flex gap-10 text-lg justify-center md:justify-normal">
-            <button className="capitalize bg-[#b36f34] hover:bg-[#614126] px-5 py-2 duration-[300ms]">
+            <Link
+              href={"/#menu"}
+              className="capitalize flex items-center bg-[#b36f34] hover:bg-[#614126] px-5 py-2 duration-[300ms]"
+              onClick={() => {
+                "/menu";
+              }}
+            >
               order now
-            </button>
+            </Link>
 
             <div className="relative group">
               <button className="capitalize bg-transparent border-2 duration-[300ms] hover:border-[#614126] border-[#b36f34] px-5 py-2">

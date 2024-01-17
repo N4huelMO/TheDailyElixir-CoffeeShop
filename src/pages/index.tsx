@@ -4,7 +4,6 @@ import { useState } from "react";
 
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
-import Card from "@/components/Card";
 import MenuSection from "@/components/MenuSection";
 
 export default function Home() {
